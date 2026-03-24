@@ -1,35 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task4
+namespace VisitorCounter
 {
     public class Visitor
     {
         public string name;
-
-        // Статическое поле — общее для всех посетителей
         private static int totalVisitors = 0;
 
-        // Конструктор
-        public Visitor(string name)
+        public Visitor(string visitorName)
         {
-            this.name = name;
-            totalVisitors++; // увеличиваем счётчик при создании объекта
+            name = visitorName;
+            totalVisitors++;
         }
 
-        // Возвращает строку с именем посетителя
-        public string PrintInfo()
+        public void PrintInfo()
         {
-            return $"Посетитель: {name}";
+            Console.WriteLine($"Посетитель: {name}");
         }
 
-        // Статический метод для получения общего числа посетителей
-        public static string ShowTotalVisitors()
+        public static void ShowTotalVisitors()
         {
-            return $"Всего посетителей: {totalVisitors}";
+            Console.WriteLine($"Всего создано посетителей: {totalVisitors}");
         }
     }
 }

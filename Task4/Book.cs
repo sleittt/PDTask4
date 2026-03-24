@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task4
+namespace BookStore
 {
     public class Book
     {
-        // Поля (по условию public)
-        public string title ;
-        public string author ;
+        public string title = "Неизвестно";
+        public string author = "Неизвестен";
         public int year;
 
-        // Метод, возвращающий информацию о книге (в консольном варианте был бы Console.WriteLine)
-        public string GetInfo()
+        public void GetInfo()
         {
-            return $"«{title}», {author} ({year})";
+            Console.WriteLine($"«{title}», {author} ({year})");
         }
     }
 }
